@@ -9,7 +9,7 @@ $(document).ready(function(){
         console.log(randomAnswer);
         $("#answer").text(randomAnswer);
         $("#answer").fadeIn(4000);
-        $("#answer").hide(8000);
+        $("#answer").fadeOut(6000);
         $("#8ball").attr("src", "https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2016/09/answerside.png")
     };
        
@@ -18,7 +18,6 @@ $(document).ready(function(){
         var question = prompt("What would you like to know?");
         $("#8ball").effect("shake");
         setTimeout(function(){magic8Ball.askQuestion(question)}, 500);
-        magic8Ball.askQuestion(question);
         $("#8ball").attr("src", "https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2016/09/magic8ballQuestion.png");
     };  $("#questionButton").click(magic8Ball.works);
 });
